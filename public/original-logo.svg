@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="original-logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="43.340573"
+     inkscape:cy="70.278438"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:0.65;fill:#f6c3a7;stroke-width:0.30077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 4.010433,2.423073 0.70635008,16.892682 13.201101,25.285812 16.467205,10.93014 Z"
+       id="path63" />
+    <path
+       style="opacity:0.65;fill:#f6c3a7;stroke-width:0.30077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 13.201101,25.32379 9.8970174,10.854184 22.391767,2.4610515 25.657872,16.816726 Z"
+       id="path63-7" />
+    <path
+       style="opacity:0.65;fill:#f6c3a7;stroke-width:0.30077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 13.201101,25.32379 4.7257007,13.139614 13.175212,0.68291986 21.572776,12.77563 Z"
+       id="path63-7-1" />
+  </g>
+</svg>

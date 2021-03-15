@@ -36,12 +36,13 @@ export default function Slider() {
                             backgroundImage: `url(${images[imageIndex]})`
                         }}
                         key={page}
-                        initial={{ opacity: 0.2 }}
+                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        exit={{ opacity: 0.2 }}
+                        exit={{ opacity: 0 }}
                         className="slider-img"
                         transition={{
-                            opacity: { duration: 1 }
+                            opacity: { duration: 2 },
+                            ease: [0.1, 0.67, 0.83, 0],
                         }}
                     />
                 </AnimatePresence>
