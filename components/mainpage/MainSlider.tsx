@@ -76,9 +76,9 @@ export default () => {
             <div className="next" onClick={() => paginate(1)}>
                 {"‣"}
             </div>
-            <div className="prev" onClick={() => paginate(-1)}>
+            {/* <div className="prev" onClick={() => paginate(-1)}>
                 {"‣"}
-            </div>
+            </div> */}
         </div>
     );
 };

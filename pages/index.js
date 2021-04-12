@@ -108,6 +108,19 @@ export default function Home() {
           </Row>
         </Container>
       </main>
+      <div className="client">
+        <Container style={{marginTop: 60}}>
+          <Row>
+            <Col xs={12}>
+              <center>
+                <h2>
+                  Our Client Speaks
+                </h2>
+              </center>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   )
 }
