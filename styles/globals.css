@@ -178,6 +178,10 @@ main h2, .client h2{
   color: rgb(140, 48, 245);
 }
 
+.client {
+  background-color:rgb(247,247,278);
+}
+
 /* main h2::after {
   width: 180px;
   height: 7px;
@@ -248,6 +252,10 @@ main p {
     font-size: 40px;
     color: rgb(140, 48, 245);
     margin-bottom: 30px;
+  }
+
+  .client h2 {
+    font-size: 36px;
   }
 
   main h2::after {

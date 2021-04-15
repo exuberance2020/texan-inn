@@ -6,8 +6,12 @@ import Navbar from '../components/Navbar'
 import useWindowSize from '../lib/useWindowSize';
 import { AnimatePresence, motion } from 'framer-motion';
 
-export default function Home() {
+export default function Home(props) {
 
+  const {
+    mainSliderImages
+  } = props;
+  
   const [w, h] = useWindowSize();
 
   let isMobile = w < 700;
@@ -20,7 +24,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className="slider-container">
-        <Slider />
+        <Slider mainSliderImages={mainSliderImages}/>
       </div>
       <Container fluid className="hero p-auto">
         <Row>
@@ -108,8 +112,8 @@ export default function Home() {
           </Row>
         </Container>
       </main>
-      <div className="client">
-        <Container style={{marginTop: 60}}>
+      <div style={{ paddingTop: 50, marginTop: 20 }} className="client">
+        <Container>
           <Row>
             <Col xs={12}>
               <center>
@@ -123,4 +127,25 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  try {
+
+    const { Assets } = await import("../lib/contentfulApis");
+
+    const mainSLiderImageData = (await Assets({"fields.type": "mainSlider"}))[0];
+
+
+    return {
+      props: {
+        mainSliderImages: mainSLiderImageData?.fields?.images.map(({fields}) => (fields?.file?.url))
+      }
+    }
+  } catch (e) {
+    console.log('error in index page:', e)
+    return {
+      props: {}
+    }
+  }
 }
