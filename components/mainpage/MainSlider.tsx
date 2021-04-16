@@ -36,7 +36,12 @@ const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
 };
 
-export default () => {
+export default (props) => {
+
+    const {
+        images
+    } = props
+
     const [[page, direction], setPage] = useState([0, 0]);
 
     const imageIndex = wrap(0, images.length, page);
@@ -50,7 +55,7 @@ export default () => {
             <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
                 <motion.img
                     key={page}
-                    src={images[imageIndex]}
+                    src={`${images[imageIndex]}?w=400`}
                     custom={direction}
                     variants={variants}
                     initial="enter"

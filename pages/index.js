@@ -107,7 +107,7 @@ export default function Home(props) {
               </p>
             </Col>
             <Col xs={12} md={6}>
-              <MainSlider ></MainSlider>
+              <MainSlider images={mainSliderImages}></MainSlider>
             </Col>
           </Row>
         </Container>
