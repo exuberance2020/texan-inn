@@ -95,7 +95,7 @@ export default function Home(props) {
           </Col>
         </Row>
       </Container>
-      <main>
+      <main id="services">
         <Container>
           <Row>
             <Col xs={12} md={6}>
@@ -115,7 +115,7 @@ export default function Home(props) {
           </Row>
         </Container>
       </main>
-      <div style={{ padding: "50px 0px", marginTop: 20 }} className="client">
+      <div id="testimonials" style={{ padding: "50px 0px", marginTop: 20 }} className="client">
         <Container>
           <Row>
             <Col xs={12}>
@@ -187,7 +187,7 @@ export default function Home(props) {
           </Row>
         </Container>
       </div>
-      <div className="contact-us">
+      <div id="aboutus" className="contact-us">
         <Container
           style={{
             background: 'url(/img/bg-1.png)',
@@ -223,7 +223,7 @@ export default function Home(props) {
         </Container>
       </div>
       <hr></hr>
-      <div style={{ paddingTop: 20, marginTop: 20 }} className="contact-us">
+      <div id="contactus" style={{ paddingTop: 20, marginTop: 20 }} className="contact-us">
         <Container className="contact-container">
           <Row className="p-auto">
             <Col xs={12} md={8} className="m-auto">
@@ -248,15 +248,15 @@ export default function Home(props) {
                   OR
                 </p>
                 <p className="font-weight-bold">
-                  Drop a query down below:
+                  Drop a message down below:
                 </p>
                 <form style={{ maxWidth: "100%", border: '1px solid #ced4da', padding: 20, borderRadius: 10 }} onSubmit={(e) => { e?.preventDefault() }}>
                   <Form.Group>
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>Your Email</Form.Label>
                     <Form.Control placeholder="jondoe@email.com" type="email" ></Form.Control>
                   </Form.Group>
                   <Form.Group>
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label>Your Message</Form.Label>
                     <Form.Control placeholder="Hey! please type your message here" as="textarea" style={{ height: 150 }} ></Form.Control>
                   </Form.Group>
                   <Button>
@@ -291,15 +291,20 @@ export default function Home(props) {
           TI&S
         </h3>
         <div class="nav">
-          <span>
-            Services
-          </span>
-          <span>
-            About
-          </span>
-          <span>
-            Contact Us
-          </span>
+          {
+            [
+              { id: '#services', name: "Our Services" },
+              { id: '#testimonials', name: "Testimonials" },
+              { id: '#aboutus', name: "About Us" },
+              { id: '#contactus', name: "Contact Us" },
+            ].map((obj, index) => (
+              <span>
+                <a href={obj.id} style={{ color: 'white' }}>
+                  {obj.name}
+                </a>
+              </span>
+            ))
+          }
         </div>
         <p className="copy-right">
           &#169; 2021 Texan Inn & Suites. All rights reserved.

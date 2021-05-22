@@ -28,8 +28,14 @@ nav {
   position: fixed !important;
   backdrop-filter: blur(3px) !important;
   width: 100vw !important;
-  color: rgb(76,39,109, 1) !important;
+  color: rgb(76,39,109, 1);
   box-shadow: 0px -5px 40px -16px;
+  padding: 12px;
+}
+
+div.nav-div > span {
+  margin: auto;
+  font-weight: bold !important;
 }
 
 .slider-container {
@@ -127,7 +133,7 @@ nav {
   width: 300px;
   max-width: 100%;
   padding: 10px;
-  margin-top:45px;
+  /* margin-top:45px; */
   /* font-family: 'Hammersmith One', sans-serif; */
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
