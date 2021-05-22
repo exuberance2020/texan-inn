@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import Slider from '../components/mainpage/Slider.tsx'
 import MainSlider from '../components/mainpage/MainSlider.tsx'
 import Navbar from '../components/Navbar'
@@ -11,7 +11,7 @@ export default function Home(props) {
   const {
     mainSliderImages
   } = props;
-  
+
   const [w, h] = useWindowSize();
 
   let isMobile = w < 700;
@@ -24,7 +24,7 @@ export default function Home(props) {
       </Head>
       <Navbar />
       <div className="slider-container">
-        <Slider mainSliderImages={mainSliderImages}/>
+        <Slider mainSliderImages={mainSliderImages} />
       </div>
       <Container fluid className="hero p-auto">
         <Row>
@@ -97,7 +97,7 @@ export default function Home(props) {
           <Row>
             <Col xs={12} md={6}>
               <h2>
-                Discover Rooms
+                Our Services
               </h2>
               <p>
                 Large and inviting rooms, with brand new carpeting and elegant color schemes and darkening full length drapes for the night shift workers.
@@ -112,7 +112,7 @@ export default function Home(props) {
           </Row>
         </Container>
       </main>
-      <div style={{ paddingTop: 50, marginTop: 20 }} className="client">
+      <div style={{ padding: "50px 0px", marginTop: 20 }} className="client">
         <Container>
           <Row>
             <Col xs={12}>
@@ -120,7 +120,87 @@ export default function Home(props) {
                 <h2>
                   Our Client Speaks
                 </h2>
+                <p>
+                  We have been working with the clients over the states
+                </p>
               </center>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col xs={12} md={4}>
+              <div className="message-card">
+                <p className="h4 font-weight-bold">
+                  Effective Collaborating
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+              </div>
+              <div className="msg-cap">
+                <div className="msg-avatar">
+                </div>
+                <span className="font-weight-bold">Mr. Abc Patel</span>
+                <p>CEO Xyz Corp.</p>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <div className="message-card">
+                <p className="h4 font-weight-bold">
+                  Mindblowing Service
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+              </div>
+              <div className="msg-cap">
+                <div className="msg-avatar">
+                </div>
+                <span className="font-weight-bold">Mr. Abc Patel</span>
+                <p>CEO Xyz Corp.</p>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <div className="message-card">
+                <p className="h4 font-weight-bold">
+                  Intuitive Design
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+              </div>
+              <div className="msg-cap">
+                <div className="msg-avatar">
+                </div>
+                <span className="font-weight-bold">Mr. Abc Patel</span>
+                <p>CEO Xyz Corp.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div style={{ paddingTop: 20, marginTop: 20 }} className="contact-us">
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <>
+                <h2>
+                  Contact Us
+                </h2>
+                <form style={{ maxWidth: 600 }} onSubmit={(e) => { e?.preventDefault() }}>
+                  <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control placeholder="jondoe@email.com" type="email" ></Form.Control>
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control placeholder="Hey! please type your message here" as="textarea" style={{ height: 150 }} ></Form.Control>
+                  </Form.Group>
+                  <Button>Submit</Button>
+                </form>
+              </>
             </Col>
           </Row>
         </Container>
@@ -134,12 +214,12 @@ export async function getStaticProps() {
 
     const { Assets } = await import("../lib/contentfulApis");
 
-    const mainSLiderImageData = (await Assets({"fields.type": "mainSlider"}))[0];
+    const mainSLiderImageData = (await Assets({ "fields.type": "mainSlider" }))[0];
 
 
     return {
       props: {
-        mainSliderImages: mainSLiderImageData?.fields?.images.map(({fields}) => (fields?.file?.url))
+        mainSliderImages: mainSLiderImageData?.fields?.images.map(({ fields }) => (fields?.file?.url))
       }
     }
   } catch (e) {
