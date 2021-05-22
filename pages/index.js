@@ -187,10 +187,39 @@ export default function Home(props) {
           </Row>
         </Container>
       </div>
+      <div className="contact-us">
+        <Container >
+          <Row>
+            <Col className="p-3">
+              <>
+                <h2 style={{textAlign: 'center'}}>
+                  About Us
+                </h2>
+                <p style={{textAlign: 'center'}}>
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                  Lorem ipsum dolor sit amet,
+                </p>
+              </>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <hr></hr>
       <div style={{ paddingTop: 20, marginTop: 20 }} className="contact-us">
         <Container className="contact-container">
-          <Row>
-            <Col xs={12}>
+          <Row className="p-auto">
+            <Col xs={12} md={8} className="m-auto">
               <>
                 <h2>
                   Contact Us
@@ -214,7 +243,7 @@ export default function Home(props) {
                 <p className="font-weight-bold">
                   Drop a query down below:
                 </p>
-                <form style={{ maxWidth: 600, border: '1px solid #ced4da', padding: 20, borderRadius: 10 }} onSubmit={(e) => { e?.preventDefault() }}>
+                <form style={{ maxWidth: "100%", border: '1px solid #ced4da', padding: 20, borderRadius: 10 }} onSubmit={(e) => { e?.preventDefault() }}>
                   <Form.Group>
                     <Form.Label>Email</Form.Label>
                     <Form.Control placeholder="jondoe@email.com" type="email" ></Form.Control>
@@ -235,6 +264,25 @@ export default function Home(props) {
           </Row>
         </Container>
       </div>
+      <footer>
+        <h3>
+          TI&S
+        </h3>
+        <div class="nav">
+          <span>
+            Services
+          </span>
+          <span>
+            About
+          </span>
+          <span>
+            Contact Us
+          </span>
+        </div>
+        <p className="copy-right">
+          &#169; 2021 Texan Inn & Suites. All rights reserved.
+        </p>
+      </footer>
     </>
   )
 }

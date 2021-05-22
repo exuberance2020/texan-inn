@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
-@import url('https://fonts.google.com/icons?selected=Material%20Icons%20Two%20Tone%3Acheck_circle');
+/* @import url('https://fonts.google.com/icons?selected=Material%20Icons%20Two%20Tone%3Acheck_circle'); */
 
 html,
 body {
@@ -200,6 +200,12 @@ main h2, .client h2, .contact-us h2{
   background-color:rgb(247,247,278);
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: rgb(140, 48, 245, 0.9) !important;
+  border-color: rgb(140, 48, 245, 0.9) !important;
+}
+
 /* main h2::after {
   width: 180px;
   height: 7px;
@@ -295,6 +301,28 @@ form {
   margin-right: 10px;
 }
 
+footer {
+  width: 100%;
+  min-height: 150px;
+  font-family: Poppins;
+  margin-top: 80px;
+  background-color: rgb(140, 48, 245, 0.9);
+  color: white;
+  padding: 25px;
+}
+
+footer .nav{
+  justify-content: space-evenly;
+}
+
+footer h3{
+  font-weight: bold;
+}
+
+.copy-right {
+  bottom: 0;
+}
+
 /*
 *************MOBILE VIEW*************
 */
@@ -307,6 +335,9 @@ form {
   }
   .hero {
     padding-top: 100px
+  }
+  .hero p{
+    text-align: center;
   }
   .hero h1 {
     padding: 20px;
@@ -356,6 +387,14 @@ form {
 
   .main-slider{
     margin-top: 0px;
+  }
+
+  footer .nav{
+    display: block;
+  }
+  
+  .nav span{
+    display: block;
   }
 }
 
