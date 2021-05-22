@@ -286,11 +286,11 @@ export default function Home(props) {
           </Row>
         </Container>
       </div>
-      <footer>
-        <h3>
-          TI&S
+      <footer style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+        <h3 style={{textAlign: 'center'}}>
+          Texan Inn & Suites
         </h3>
-        <div class="nav">
+        <div class="nav" >
           {
             [
               { id: '#services', name: "Our Services" },
@@ -306,7 +306,7 @@ export default function Home(props) {
             ))
           }
         </div>
-        <p className="copy-right">
+        <p className="copy-right mb-0 mx-auto">
           &#169; 2021 Texan Inn & Suites. All rights reserved.
         </p>
       </footer>
