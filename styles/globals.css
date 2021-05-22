@@ -179,6 +179,10 @@ main h2, .client h2, .contact-us h2{
   color: rgb(140, 48, 245);
 }
 
+.contact-us {
+  font-family: 'Poppins', sans-serif;
+}
+
 .client {
   background-color:rgb(247,247,278);
 }
@@ -265,16 +269,15 @@ form {
   margin-bottom: 10px;
 }
 
-/* .message-card:before {
-  content: '';
-  position: absolute;
-  transform: rotate(45deg);
-  width: 36px;
-  height: 36px;
-  bottom: -12px;
-  z-index: 0;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-} */
+.tel svg {
+  border-radius: 25%;
+  border: 1px solid black;
+  padding: 5px;
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
 /*
 *************MOBILE VIEW*************
 */

@@ -189,7 +189,26 @@ export default function Home(props) {
                 <h2>
                   Contact Us
                 </h2>
-                <form style={{ maxWidth: 600 }} onSubmit={(e) => { e?.preventDefault() }}>
+                <p className="font-weight-bold">
+                  Call us at:
+                </p>
+                <p>
+                  <a className="tel" href="tel:+19999999999">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                    <span style={{ color: 'black' }}>
+                      +1 999 999 9999
+                    </span>
+                  </a>
+                </p>
+                <p>
+                  OR
+                </p>
+                <p className="font-weight-bold">
+                  Drop a query down below:
+                </p>
+                <form style={{ maxWidth: 600, border: '1px solid #ced4da', padding: 20, borderRadius: 10 }} onSubmit={(e) => { e?.preventDefault() }}>
                   <Form.Group>
                     <Form.Label>Email</Form.Label>
                     <Form.Control placeholder="jondoe@email.com" type="email" ></Form.Control>
@@ -198,7 +217,12 @@ export default function Home(props) {
                     <Form.Label>Message</Form.Label>
                     <Form.Control placeholder="Hey! please type your message here" as="textarea" style={{ height: 150 }} ></Form.Control>
                   </Form.Group>
-                  <Button>Submit</Button>
+                  <Button>
+                    Send
+                    <svg style={{marginLeft: 7,transform: 'rotate(45deg) translate(0,-4px)'}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-triangle-half" viewBox="0 0 16 16">
+                      <path d="M8.065 2.016A.13.13 0 0 0 8.002 2v11.983l6.856.017a.12.12 0 0 0 .066-.017.162.162 0 0 0 .054-.06.176.176 0 0 0-.002-.183L8.12 2.073a.146.146 0 0 0-.054-.057zm-1.043-.45a1.13 1.13 0 0 1 1.96 0l6.856 11.667c.458.778-.091 1.767-.98 1.767H1.146c-.889 0-1.437-.99-.98-1.767L7.022 1.566z" />
+                    </svg>
+                  </Button>
                 </form>
               </>
             </Col>
