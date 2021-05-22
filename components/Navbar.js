@@ -50,7 +50,7 @@ function Navbar() {
                      {id:'#aboutus', name: "About Us"},
                      {id:'#contactus', name: "Contact Us"},
                  ].map((obj, index) => (
-                    <span>
+                    <span className="mx-0">
                         <a href={obj.id} style={{color: isHero ? 'white' : 'rgb(140, 48, 245)'}}>
                             {obj.name}
                         </a>
