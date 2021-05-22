@@ -188,14 +188,21 @@ export default function Home(props) {
         </Container>
       </div>
       <div className="contact-us">
-        <Container >
+        <Container
+          style={{
+            background: 'url(/img/bg-1.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: 300,
+            paddingTop: 50
+          }}>
           <Row>
             <Col className="p-3">
               <>
-                <h2 style={{textAlign: 'center'}}>
+                <h2 style={{ textAlign: 'center' }}>
                   About Us
                 </h2>
-                <p style={{textAlign: 'center'}}>
+                <p style={{ textAlign: 'center' }}>
                   Lorem ipsum dolor sit amet,
                   Lorem ipsum dolor sit amet,
                   Lorem ipsum dolor sit amet,
@@ -261,6 +268,21 @@ export default function Home(props) {
                 </form>
               </>
             </Col>
+            {w >= 845 && <Col md={4}>
+              <figure style={{
+                width: '100%',
+                height: '100%'
+              }}>
+                <img
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                  src="/img/chat-1.png"
+                />
+              </figure>
+            </Col>}
           </Row>
         </Container>
       </div>
